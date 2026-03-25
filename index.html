@@ -59,18 +59,17 @@
 <!-- NAV -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl transition-all duration-300 ease-in-out border-b border-outline-variant/10">
   <div class="flex justify-between items-center px-5 sm:px-8 py-4 md:py-5 max-w-[1920px] mx-auto">
-    <a href="/" class="flex flex-col leading-none">
-      <span class="text-xl md:text-2xl font-black tracking-tighter text-primary font-headline">자라섬 수자인</span>
-      <span class="text-[10px] md:text-xs font-bold tracking-wider text-outline uppercase mt-0.5">RIVER FESTA</span>
+    <a href="index.html">
+      <img src="images/logo.png" alt="자라섬 수자인 리버페스타" class="h-9 md:h-10 w-auto" style="filter: brightness(0) saturate(100%) invert(8%) sepia(53%) saturate(1890%) hue-rotate(207deg) brightness(95%);"/>
     </a>
     <div class="hidden lg:flex items-center gap-10 xl:gap-12">
       <div class="group relative py-2">
         <button class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">사업안내</button>
         <div class="mega-menu-content absolute top-full left-0 w-52 bg-white shadow-2xl p-5 rounded-xl border border-outline-variant/10">
           <ul class="space-y-3">
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="사업안내/#overview">사업개요</a></li>
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="사업안내/#location">입지환경</a></li>
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="사업안내/#access">교통</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="사업안내/index.html#overview">사업개요</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="사업안내/index.html#location">입지환경</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="사업안내/index.html#access">교통</a></li>
           </ul>
         </div>
       </div>
@@ -78,9 +77,9 @@
         <button class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">단지안내</button>
         <div class="mega-menu-content absolute top-full left-0 w-52 bg-white shadow-2xl p-5 rounded-xl border border-outline-variant/10">
           <ul class="space-y-3">
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="단지안내/#premium">단지특화</a></li>
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="단지안내/#community">커뮤니티</a></li>
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="단지안내/#aircare">에어케어</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="단지안내/index.html#premium">단지특화</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="단지안내/index.html#community">커뮤니티</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="단지안내/index.html#aircare">에어케어</a></li>
           </ul>
         </div>
       </div>
@@ -88,8 +87,8 @@
         <button class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">세대안내</button>
         <div class="mega-menu-content absolute top-full left-0 w-52 bg-white shadow-2xl p-5 rounded-xl border border-outline-variant/10">
           <ul class="space-y-3">
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="세대안내/#units">세대안내</a></li>
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="세대안내/#contract">분양조건</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="세대안내/index.html#units">세대안내</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="세대안내/index.html#contract">분양조건</a></li>
           </ul>
         </div>
       </div>
@@ -99,15 +98,15 @@
         <span class="text-xs text-outline tracking-wider">분양 상담</span>
         <a href="tel:15511554" class="text-lg md:text-xl font-black tracking-tight text-primary hover:text-primary-container transition-colors font-headline">1551-1554</a>
       </div>
-      <a href="세대안내/#contact" class="bg-primary text-on-primary px-4 md:px-6 py-2.5 rounded-xl font-headline font-bold text-sm tracking-wider md:tracking-widest hover:bg-primary-container transition-all">상담신청</a>
+      <a href="세대안내/index.html#contact" class="bg-primary text-on-primary px-4 md:px-6 py-2.5 rounded-xl font-headline font-bold text-sm tracking-wider md:tracking-widest hover:bg-primary-container transition-all">상담신청</a>
       <button id="mobile-menu-btn" class="text-primary lg:hidden p-1"><span class="material-symbols-outlined text-2xl">menu</span></button>
     </div>
   </div>
   <!-- Mobile Menu Drawer -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-outline-variant/10 px-5 py-6 space-y-1">
-    <a href="사업안내/" class="block font-headline font-bold text-base text-on-surface py-3 border-b border-outline-variant/20">사업안내</a>
-    <a href="단지안내/" class="block font-headline font-bold text-base text-on-surface py-3 border-b border-outline-variant/20">단지안내</a>
-    <a href="세대안내/" class="block font-headline font-bold text-base text-on-surface py-3 border-b border-outline-variant/20">세대안내</a>
+    <a href="사업안내/index.html" class="block font-headline font-bold text-base text-on-surface py-3 border-b border-outline-variant/20">사업안내</a>
+    <a href="단지안내/index.html" class="block font-headline font-bold text-base text-on-surface py-3 border-b border-outline-variant/20">단지안내</a>
+    <a href="세대안내/index.html" class="block font-headline font-bold text-base text-on-surface py-3 border-b border-outline-variant/20">세대안내</a>
     <a href="tel:15511554" class="flex items-center gap-2 font-headline font-bold text-base text-primary py-3">
       <span class="material-symbols-outlined text-xl">call</span> 1551-1554
     </a>
@@ -146,10 +145,10 @@
         자라섬 수자인 리버페스타 — 전세대 북한강 자라섬 영구 조망,<br class="hidden sm:block"/> 단 381세대의 독보적인 수변 라이프스타일.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 sm:gap-5">
-        <a href="세대안내/#contact" class="bg-white text-primary px-7 sm:px-10 py-4 sm:py-5 font-headline font-extrabold text-sm sm:text-base tracking-widest hover:bg-surface-container-low transition-all shadow-2xl text-center">
+        <a href="세대안내/index.html#contact" class="bg-white text-primary px-7 sm:px-10 py-4 sm:py-5 font-headline font-extrabold text-sm sm:text-base tracking-widest hover:bg-surface-container-low transition-all shadow-2xl text-center">
           상담 신청하기
         </a>
-        <a href="사업안내/" class="border border-white/50 text-white px-7 sm:px-10 py-4 sm:py-5 font-headline font-bold text-sm sm:text-base tracking-widest hover:bg-white/10 transition-all text-center">
+        <a href="사업안내/index.html" class="border border-white/50 text-white px-7 sm:px-10 py-4 sm:py-5 font-headline font-bold text-sm sm:text-base tracking-widest hover:bg-white/10 transition-all text-center">
           사업개요 보기
         </a>
       </div>
@@ -167,7 +166,7 @@
           경기도 가평, 북한강과 자라섬을 품은 최상의 입지에 탄생하는 프리미엄 수변 주거 단지.
           BS한양건설의 기술력과 한국토지신탁의 안정적인 구조로 완성됩니다.
         </p>
-        <a href="사업안내/" class="inline-flex items-center gap-2 mt-7 font-headline font-bold text-sm tracking-widest uppercase text-primary border-b border-primary pb-1 hover:text-primary-container hover:border-primary-container transition-colors">
+        <a href="사업안내/index.html" class="inline-flex items-center gap-2 mt-7 font-headline font-bold text-sm tracking-widest uppercase text-primary border-b border-primary pb-1 hover:text-primary-container hover:border-primary-container transition-colors">
           자세히 보기 <span class="material-symbols-outlined text-base">arrow_forward</span>
         </a>
       </div>
@@ -212,7 +211,7 @@
       <h2 class="font-headline font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-primary uppercase">EXPLORE</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-      <a href="사업안내/" class="group">
+      <a href="사업안내/index.html" class="group">
         <div class="aspect-[4/3] overflow-hidden mb-6 md:mb-8 bg-surface-container-high">
           <img class="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
             src="images/card_1.jpg" alt="사업안내"/>
@@ -223,7 +222,7 @@
           더 보기 <span class="material-symbols-outlined text-base">arrow_forward</span>
         </span>
       </a>
-      <a href="단지안내/" class="group">
+      <a href="단지안내/index.html" class="group">
         <div class="aspect-[4/3] overflow-hidden mb-6 md:mb-8 bg-surface-container-high">
           <img class="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
             src="images/card_3.jpg" alt="단지안내"/>
@@ -234,7 +233,7 @@
           더 보기 <span class="material-symbols-outlined text-base">arrow_forward</span>
         </span>
       </a>
-      <a href="세대안내/" class="group">
+      <a href="세대안내/index.html" class="group">
         <div class="aspect-[4/3] overflow-hidden mb-6 md:mb-8 bg-surface-container-high">
           <img class="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
             src="images/hero_mobile.jpg" alt="세대안내"/>
@@ -270,10 +269,10 @@
     <div class="space-y-5">
       <h6 class="font-headline font-bold text-sm tracking-widest uppercase">바로가기</h6>
       <ul class="space-y-3 text-sm opacity-70">
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="사업안내/">사업안내</a></li>
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="단지안내/">단지안내</a></li>
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="세대안내/">세대안내</a></li>
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="세대안내/#contact">상담신청</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="사업안내/index.html">사업안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="단지안내/index.html">단지안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="세대안내/index.html">세대안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="세대안내/index.html#contact">상담신청</a></li>
       </ul>
     </div>
     <div class="space-y-5">

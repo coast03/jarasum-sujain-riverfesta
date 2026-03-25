@@ -16,6 +16,9 @@
   .mega-menu-content{display:none;}.group:hover .mega-menu-content{display:block;}
   html{scroll-behavior:smooth;}
   @keyframes ping-slow{0%{box-shadow:0 0 0 0 rgba(0,23,54,0.35);}70%{box-shadow:0 0 0 14px rgba(0,23,54,0);}100%{box-shadow:0 0 0 0 rgba(0,23,54,0);}}.ping-slow{animation:ping-slow 2.4s ease-out infinite;}
+  .unit-panel{display:none;}.unit-panel.active{display:block;}
+  .tab-size-btn.active{background-color:#001736;color:#ffffff;}
+  .tab-type-btn.active{background-color:#001736;color:#ffffff;}
 </style>
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
@@ -23,19 +26,17 @@
 <!-- NAV -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl transition-all duration-300 border-b border-outline-variant/10">
   <div class="flex justify-between items-center px-5 sm:px-8 py-4 md:py-5 max-w-[1920px] mx-auto">
-    <a href="../" class="flex flex-col leading-none">
-      <span class="text-xl md:text-2xl font-black tracking-tighter text-primary font-headline">자라섬 수자인</span>
-      <span class="text-[10px] md:text-xs font-bold tracking-wider text-outline uppercase mt-0.5">RIVER FESTA</span>
+    <a href="../index.html">
+      <img src="../images/logo.png" alt="자라섬 수자인 리버페스타" class="h-9 md:h-10 w-auto" style="filter: brightness(0) saturate(100%) invert(8%) sepia(53%) saturate(1890%) hue-rotate(207deg) brightness(95%);"/>
     </a>
     <div class="hidden lg:flex items-center gap-10 xl:gap-12">
-      <a href="../사업안내/" class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">사업안내</a>
-      <a href="../단지안내/" class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">단지안내</a>
+      <a href="../사업안내/index.html" class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">사업안내</a>
+      <a href="../단지안내/index.html" class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">단지안내</a>
       <div class="group relative py-2">
         <button class="font-headline font-bold tracking-tight uppercase text-sm text-primary border-b-2 border-primary pb-1">세대안내</button>
         <div class="mega-menu-content absolute top-full left-0 w-52 bg-white shadow-2xl p-5 rounded-xl border border-outline-variant/10">
           <ul class="space-y-3">
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#units">세대안내</a></li>
-            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#contract">분양조건</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#units">주택형 안내</a></li>
             <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#contact">상담신청</a></li>
           </ul>
         </div>
@@ -47,7 +48,15 @@
         <a href="tel:15511554" class="text-lg md:text-xl font-black tracking-tight text-primary hover:text-primary-container transition-colors font-headline">1551-1554</a>
       </div>
       <a href="#contact" class="bg-primary text-on-primary px-4 md:px-6 py-2.5 rounded-xl font-headline font-bold text-sm tracking-wider hover:bg-primary-container transition-all">상담신청</a>
-      <button class="text-primary lg:hidden p-1"><span class="material-symbols-outlined text-2xl">menu</span></button>
+      <button id="mobile-menu-btn" class="text-primary lg:hidden p-1"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-outline-variant/10 px-5 py-4">
+    <div class="flex flex-col gap-4">
+      <a href="../사업안내/index.html" class="font-headline font-bold text-sm text-on-surface-variant hover:text-primary py-1">사업안내</a>
+      <a href="../단지안내/index.html" class="font-headline font-bold text-sm text-on-surface-variant hover:text-primary py-1">단지안내</a>
+      <a href="#units" class="font-headline font-bold text-sm text-primary py-1">세대안내</a>
+      <a href="#contact" class="font-headline font-bold text-sm text-on-surface-variant hover:text-primary py-1">상담신청</a>
     </div>
   </div>
 </nav>
@@ -60,166 +69,414 @@
       <div class="max-w-4xl">
         <span class="text-primary font-headline font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 md:mb-4 block">Jara Island Sujain River Festa</span>
         <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight md:tracking-tighter text-primary leading-tight md:leading-[0.95] lg:leading-[0.9] mb-5 md:mb-8">세대안내</h1>
-        <p class="text-on-surface-variant font-body text-base md:text-lg lg:text-xl leading-[1.8] max-w-xl">84㎡ · 104㎡ 타입별 평면, 분양가, 계약 조건까지 자라섬 수자인 리버페스타의 세대 정보를 상세히 안내합니다.</p>
+        <p class="text-on-surface-variant font-body text-base md:text-lg lg:text-xl leading-[1.8] max-w-xl">누구의 방해도 받지 않는 자라섬 맨 앞자리.<br/>전세대 북한강 자라섬 압도적 조망권.</p>
       </div>
-      <div class="hidden lg:block text-right shrink-0">
-        <p class="text-outline font-label text-sm uppercase tracking-[0.2em] mb-2">Down Payment</p>
-        <p class="text-primary font-headline font-bold text-2xl">계약금 500만원 정액</p>
+      <div class="hidden lg:flex flex-col items-end gap-2 shrink-0">
+        <span class="text-outline text-xs font-bold uppercase tracking-widest">총 세대</span>
+        <span class="font-headline font-black text-3xl text-primary">381세대</span>
+        <span class="text-on-surface-variant text-sm">84 · 104 · 130 · 153㎡</span>
       </div>
     </div>
   </header>
 
-  <!-- SECTION 1: UNIT TYPES -->
+  <!-- SECTION: UNIT TYPES -->
   <section id="units" class="mb-20 md:mb-32">
     <div class="px-5 sm:px-8 max-w-[1920px] mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20">
-        <span class="block font-label text-xs sm:text-sm uppercase tracking-widest text-outline mb-3 md:mb-4">세대 구성</span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-black text-primary mb-5 md:mb-6 tracking-tight md:tracking-tighter uppercase">분양가 안내</h2>
-        <div class="h-1 w-16 bg-primary mx-auto"></div>
+
+      <!-- Size Tab Buttons -->
+      <div class="grid grid-cols-4 gap-1.5 sm:gap-3 mb-6">
+        <button class="tab-size-btn active py-3 sm:py-4 font-headline font-bold text-xs sm:text-base tracking-wide border border-primary transition-all" data-size="84">84㎡</button>
+        <button class="tab-size-btn py-3 sm:py-4 font-headline font-bold text-xs sm:text-base tracking-wide border border-primary text-primary transition-all" data-size="104">104㎡</button>
+        <button class="tab-size-btn py-3 sm:py-4 font-headline font-bold text-xs sm:text-base tracking-wide border border-primary text-primary transition-all" data-size="130">130㎡</button>
+        <button class="tab-size-btn py-3 sm:py-4 font-headline font-bold text-xs sm:text-base tracking-wide border border-primary text-primary transition-all" data-size="153">153㎡</button>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 md:gap-8 max-w-5xl mx-auto">
-        <!-- 84 -->
-        <div class="group">
-          <div class="aspect-[3/2] overflow-hidden mb-6 md:mb-8 bg-surface-container-high">
-            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format&fit=crop" alt="84㎡"/>
-          </div>
-          <div class="border-t-4 border-primary pt-6 md:pt-8">
-            <div class="flex justify-between items-start mb-5 md:mb-6">
-              <div>
-                <span class="text-outline text-xs sm:text-sm font-bold uppercase tracking-widest block mb-1">TYPE A</span>
-                <h3 class="font-headline font-black text-4xl md:text-5xl text-primary">84㎡</h3>
-                <span class="text-on-surface-variant text-base md:text-lg">(34평형)</span>
-              </div>
-              <div class="text-right">
-                <span class="text-outline text-xs uppercase tracking-wider block mb-1">평당</span>
-                <span class="font-headline font-bold text-lg md:text-2xl text-primary">약 1,300만원</span>
-              </div>
-            </div>
-            <div class="space-y-4 border-t border-outline-variant/30 pt-5 md:pt-6">
-              <div class="flex justify-between items-start gap-4">
-                <span class="text-on-surface-variant text-sm md:text-base shrink-0">분양가 범위</span>
-                <span class="font-headline font-bold text-base md:text-lg text-primary text-right">4억 2,350 ~ 4억 2,630만원</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-on-surface-variant text-sm md:text-base">계약금</span>
-                <span class="font-bold text-sm md:text-base text-primary">500만원 정액</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-on-surface-variant text-sm md:text-base">중도금</span>
-                <span class="font-bold text-sm md:text-base text-primary">무이자</span>
-              </div>
-            </div>
-            <a href="#contact" class="mt-6 md:mt-8 block text-center bg-primary text-white py-4 md:py-5 font-headline font-bold text-sm md:text-base tracking-widest hover:bg-primary-container transition-all">
-              84㎡ 상담 신청
-            </a>
-          </div>
-        </div>
+      <!-- Type Sub-buttons -->
+      <div id="subtabs-84" class="subtab-group grid grid-cols-3 gap-1.5 sm:gap-2 mb-8">
+        <button class="tab-type-btn active py-3 font-headline font-bold text-sm border border-outline-variant transition-all" data-unit="84A">TYPE A</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="84B">TYPE B</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="84C">TYPE C</button>
+      </div>
+      <div id="subtabs-104" class="subtab-group grid grid-cols-3 gap-1.5 sm:gap-2 mb-8" style="display:none">
+        <button class="tab-type-btn active py-3 font-headline font-bold text-sm border border-outline-variant transition-all" data-unit="104A">TYPE A</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="104B">TYPE B</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="104C">TYPE C</button>
+      </div>
+      <div id="subtabs-130" class="subtab-group grid grid-cols-3 gap-1.5 sm:gap-2 mb-8" style="display:none">
+        <button class="tab-type-btn active py-3 font-headline font-bold text-sm border border-outline-variant transition-all" data-unit="130A">TYPE A</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="130B">TYPE B</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="130C">TYPE C</button>
+      </div>
+      <div id="subtabs-153" class="subtab-group grid grid-cols-3 gap-1.5 sm:gap-2 mb-8" style="display:none">
+        <button class="tab-type-btn active py-3 font-headline font-bold text-sm border border-outline-variant transition-all" data-unit="153A">TYPE A</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="153B">TYPE B</button>
+        <button class="tab-type-btn py-3 font-headline font-bold text-sm border border-outline-variant text-on-surface-variant transition-all" data-unit="153C">TYPE C</button>
+      </div>
 
-        <!-- 104 -->
-        <div class="group">
-          <div class="aspect-[3/2] overflow-hidden mb-6 md:mb-8 bg-surface-container-high">
-            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
-              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80&auto=format&fit=crop" alt="104㎡"/>
+      <!-- ===== 84A ===== -->
+      <div id="unit-84A" class="unit-panel active">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">84A</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 84.9182㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">22.6098㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">107.5280㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">31.6143㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">139.1423㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">182세대</span></div>
+              </div>
+            </div>
           </div>
-          <div class="border-t-4 border-primary-container pt-6 md:pt-8">
-            <div class="flex justify-between items-start mb-5 md:mb-6">
-              <div>
-                <span class="text-outline text-xs sm:text-sm font-bold uppercase tracking-widest block mb-1">TYPE B</span>
-                <h3 class="font-headline font-black text-4xl md:text-5xl text-primary">104㎡</h3>
-                <span class="text-on-surface-variant text-base md:text-lg">(41평형)</span>
-              </div>
-              <div class="text-right">
-                <span class="text-outline text-xs uppercase tracking-wider block mb-1">평당</span>
-                <span class="font-headline font-bold text-lg md:text-2xl text-primary">약 1,390만원</span>
-              </div>
-            </div>
-            <div class="space-y-4 border-t border-outline-variant/30 pt-5 md:pt-6">
-              <div class="flex justify-between items-start gap-4">
-                <span class="text-on-surface-variant text-sm md:text-base shrink-0">분양가 범위</span>
-                <span class="font-headline font-bold text-base md:text-lg text-primary text-right">5억 6,280 ~ 5억 7,090만원</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-on-surface-variant text-sm md:text-base">계약금</span>
-                <span class="font-bold text-sm md:text-base text-primary">500만원 정액</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-on-surface-variant text-sm md:text-base">중도금</span>
-                <span class="font-bold text-sm md:text-base text-primary">무이자</span>
-              </div>
-            </div>
-            <a href="#contact" class="mt-6 md:mt-8 block text-center bg-primary text-white py-4 md:py-5 font-headline font-bold text-sm md:text-base tracking-widest hover:bg-primary-container transition-all">
-              104㎡ 상담 신청
-            </a>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/058045684360e.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/e6a5e77fe94d3.png" alt="84A 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/836458ee32174.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/0b5592304d7ae.png" alt="84A 옵션" class="w-full"/>
+            </picture></div>
           </div>
         </div>
       </div>
+
+      <!-- ===== 84B ===== -->
+      <div id="unit-84B" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">84B</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 84.9170㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">21.9489㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">106.8659㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">31.6138㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">138.4797㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">53세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/eb9056f550173.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/ba2290497794a.png" alt="84B 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/9a80646987c28.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/d5c546d40ec51.png" alt="84B 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 84C ===== -->
+      <div id="unit-84C" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">84C</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 84.9176㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">22.7038㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">107.6214㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">31.6140㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">139.2354㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">26세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/7ce47645bcd18.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/e5dda3f8c63e6.png" alt="84C 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/6798d1188f47e.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/0b6c08390b5ed.png" alt="84C 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 104A ===== -->
+      <div id="unit-104A" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">104A</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 104.4224㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">28.3394㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">132.7618㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">38.8754㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">171.6372㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">53세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/73817d9c764c7.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/8f33216966476.png" alt="104A 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/fc857fb5297af.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/d8e2cf01ca0ca.png" alt="104A 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 104B ===== -->
+      <div id="unit-104B" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">104B</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 104.8438㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">28.0177㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">132.8615㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">39.0323㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">171.8938㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">26세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/d96266c034408.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/84246d9db725a.png" alt="104B 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/e995b82eaf8c7.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/e3cb3b958aa1b.png" alt="104B 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 104C ===== -->
+      <div id="unit-104C" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">104C</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 104.5252㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">27.7415㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">132.2667㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">38.9137㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">171.1804㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">27세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/e59f0380714f5.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/65d6041fa032d.png" alt="104C 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/61cbef6d47738.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/a62f4c0e238a3.png" alt="104C 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 130A ===== -->
+      <div id="unit-130A" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT · 복층형</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">130A</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 130.3910㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">35.9246㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">166.3156㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">48.5429㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">214.8585㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">7세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/00bda8942697c.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/175b7876a7db2.png" alt="130A 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/ac450257b4419.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/0c8f9ceb533ea.png" alt="130A 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 130B ===== -->
+      <div id="unit-130B" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT · 복층형</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">130B</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 130.4724㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">34.9838㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">165.4562㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">48.5725㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">214.0287㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">2세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/4ab181301897f.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/69fc78217a9d6.png" alt="130B 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/0886b0fba3901.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/df26389ac392f.png" alt="130B 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 130C ===== -->
+      <div id="unit-130C" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT · 복층형</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">130C</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 130.0897㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">35.6517㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">165.7414㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">48.4301㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">214.1715㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">1세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/2b8e7e14867ce.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/0edef44870f82.png" alt="130C 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/cd9a0240d4593.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/daf967fe0bf70.png" alt="130C 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 153A ===== -->
+      <div id="unit-153A" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT · 복층형</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">153A</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 153.5106㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">42.0832㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">195.5938㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">57.1484㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">252.7422㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">2세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/8cd896428690b.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/0ce5468a99ddf.png" alt="153A 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/c95d02e671b66.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/43061398f8e1e.png" alt="153A 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 153B ===== -->
+      <div id="unit-153B" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT · 복층형</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">153B</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 153.4995㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">41.6158㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">195.1153㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">57.1443㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">252.2596㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">1세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/6161973412f06.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/5e34b608cd406.png" alt="153B 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/6a64a90052ce7.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/41c429b43cb55.png" alt="153B 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 153C ===== -->
+      <div id="unit-153C" class="unit-panel">
+        <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+          <div class="lg:col-span-4">
+            <div class="bg-primary text-white p-6 md:p-10 mb-4">
+              <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-4">PREMIUM UNIT · 복층형</span>
+              <div class="text-5xl md:text-6xl font-black font-headline tracking-tight mb-2">153C</div>
+              <div class="text-on-primary-container text-lg mb-6">전용 153.7755㎡</div>
+              <div class="space-y-3 border-t border-white/20 pt-6">
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공용면적</span><span class="font-bold">41.4887㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">공급면적</span><span class="font-bold">195.2642㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">기타공용</span><span class="font-bold">57.2466㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">계약면적</span><span class="font-bold">252.5108㎡</span></div>
+                <div class="flex justify-between text-sm"><span class="text-on-primary-container">세대수</span><span class="font-bold">1세대</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-10">
+            <picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/64386886de2bf.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/4d3a8020aaf83.png" alt="153C 평면도" class="w-full"/>
+            </picture>
+            <div class="mt-8 pt-8 border-t border-outline-variant/20"><picture>
+              <source media="(max-width:639px)" srcset="https://cdn.imweb.me/thumbnail/20241008/341de57633089.png"/>
+              <img src="https://cdn.imweb.me/thumbnail/20241008/6f68e10ce95db.png" alt="153C 옵션" class="w-full"/>
+            </picture></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- SECTION 2: CONTRACT CONDITIONS -->
-  <section id="contract" class="bg-surface-container-low py-16 md:py-24 lg:py-32">
-    <div class="px-5 sm:px-8 max-w-[1920px] mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-6 mb-10 md:mb-20">
-        <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-primary mb-3 md:mb-4 tracking-tight">분양 조건</h2>
-          <p class="text-on-surface-variant leading-[1.8] text-base md:text-lg lg:text-xl max-w-lg">비규제 지역의 파격적인 혜택. 최소한의 초기 자금으로 최고의 수변 라이프스타일을 시작하세요.</p>
-        </div>
-      </div>
-      <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
-        <div class="lg:col-span-7 bg-white shadow-[0_8px_32px_rgba(0,27,61,0.06)]">
-          <table class="w-full text-left font-body">
-            <tbody class="divide-y divide-surface-container">
-              <tr><th class="py-5 md:py-6 px-5 md:px-8 text-outline font-medium text-sm md:text-base w-2/5 align-top">계약금</th><td class="py-5 md:py-6 pr-5 md:pr-8 text-primary font-semibold text-base md:text-xl leading-[1.7]">500만원 정액</td></tr>
-              <tr><th class="py-5 md:py-6 px-5 md:px-8 text-outline font-medium text-sm md:text-base align-top">중도금</th><td class="py-5 md:py-6 pr-5 md:pr-8 text-primary font-semibold text-base md:text-xl leading-[1.7]">무이자 (2027년 입주 시까지)</td></tr>
-              <tr><th class="py-5 md:py-6 px-5 md:px-8 text-outline font-medium text-sm md:text-base align-top">잔금</th><td class="py-5 md:py-6 pr-5 md:pr-8 text-primary font-semibold text-base md:text-xl leading-[1.7]">입주 시 납부</td></tr>
-              <tr><th class="py-5 md:py-6 px-5 md:px-8 text-outline font-medium text-sm md:text-base align-top">전매 제한</th><td class="py-5 md:py-6 pr-5 md:pr-8 leading-[1.7]"><span class="inline-block bg-primary text-white text-xs md:text-sm px-3 py-1 font-bold mr-2">없음</span><span class="text-primary font-semibold text-sm md:text-base">비규제 지역 자유 전매</span></td></tr>
-              <tr><th class="py-5 md:py-6 px-5 md:px-8 text-outline font-medium text-sm md:text-base align-top">주택 수</th><td class="py-5 md:py-6 pr-5 md:pr-8 leading-[1.7]"><span class="inline-block bg-primary text-white text-xs md:text-sm px-3 py-1 font-bold mr-2">미포함</span><span class="text-primary font-semibold text-sm md:text-base">취득세 중과 없음</span></td></tr>
-              <tr><th class="py-5 md:py-6 px-5 md:px-8 text-outline font-medium text-sm md:text-base align-top">종부세</th><td class="py-5 md:py-6 pr-5 md:pr-8 text-primary font-semibold text-base md:text-xl leading-[1.7]">0원 (주택 수 별도 계산)</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="lg:col-span-5">
-          <div class="bg-primary p-7 md:p-12 h-full">
-            <span class="text-on-primary-container text-xs font-bold uppercase tracking-widest block mb-7 md:mb-8">비규제 지역 혜택 요약</span>
-            <div class="space-y-7 md:space-y-8">
-              <div class="flex items-start gap-4 md:gap-5">
-                <span class="material-symbols-outlined text-white text-3xl md:text-4xl shrink-0">home</span>
-                <div>
-                  <h4 class="font-headline font-bold text-lg md:text-xl text-white mb-1.5">주택 수 미포함</h4>
-                  <p class="text-on-primary-container text-sm md:text-base opacity-80 leading-[1.75]">이미 주택을 보유하고 있어도 주택 수에서 제외</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 md:gap-5">
-                <span class="material-symbols-outlined text-white text-3xl md:text-4xl shrink-0">sell</span>
-                <div>
-                  <h4 class="font-headline font-bold text-lg md:text-xl text-white mb-1.5">취득세 중과 없음</h4>
-                  <p class="text-on-primary-container text-sm md:text-base opacity-80 leading-[1.75]">다주택자도 일반 취득세율 적용</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 md:gap-5">
-                <span class="material-symbols-outlined text-white text-3xl md:text-4xl shrink-0">swap_horiz</span>
-                <div>
-                  <h4 class="font-headline font-bold text-lg md:text-xl text-white mb-1.5">전매 제한 없음</h4>
-                  <p class="text-on-primary-container text-sm md:text-base opacity-80 leading-[1.75]">계약 후 즉시 자유롭게 전매 가능</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 md:gap-5">
-                <span class="material-symbols-outlined text-white text-3xl md:text-4xl shrink-0">savings</span>
-                <div>
-                  <h4 class="font-headline font-bold text-lg md:text-xl text-white mb-1.5">중도금 무이자</h4>
-                  <p class="text-on-primary-container text-sm md:text-base opacity-80 leading-[1.75]">2027년 9월 입주까지 추가 이자 부담 제로</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: CONTACT FORM -->
+  <!-- CONTACT -->
   <section id="contact" class="bg-primary py-16 md:py-24 lg:py-32 px-5 sm:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -252,8 +509,10 @@
               <label class="font-label text-xs md:text-sm font-bold text-on-surface-variant uppercase tracking-wider block mb-2">관심 평형</label>
               <select class="w-full border border-outline-variant bg-surface px-4 md:px-5 py-3.5 md:py-4 font-body text-base focus:outline-none focus:border-primary transition-colors rounded-xl appearance-none">
                 <option value="">관심 평형을 선택해주세요</option>
-                <option value="84">84㎡ (34평형) — 약 4억 2천만원대</option>
-                <option value="104">104㎡ (41평형) — 약 5억 6천만원대</option>
+                <option value="84">84㎡ (전용 84A · 84B · 84C)</option>
+                <option value="104">104㎡ (전용 104A · 104B · 104C)</option>
+                <option value="130">130㎡ 복층형 (전용 130A · 130B · 130C)</option>
+                <option value="153">153㎡ 복층형 (전용 153A · 153B · 153C)</option>
               </select>
             </div>
             <div>
@@ -284,9 +543,9 @@
     <div class="space-y-5">
       <h6 class="font-headline font-bold text-sm tracking-widest uppercase">바로가기</h6>
       <ul class="space-y-3 text-sm opacity-70">
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../사업안내/">사업안내</a></li>
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../단지안내/">단지안내</a></li>
-        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../세대안내/">세대안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../사업안내/index.html">사업안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../단지안내/index.html">단지안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../세대안내/index.html">세대안내</a></li>
         <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="#contact">상담신청</a></li>
       </ul>
     </div>
@@ -312,5 +571,68 @@
     <div><div class="text-[10px] tracking-widest uppercase opacity-70">상담 전화</div><div class="font-headline font-black text-xl md:text-2xl leading-tight">1551-1554</div></div>
   </a>
 </div>
+
+<script>
+  // Mobile menu
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    var menu = document.getElementById('mobile-menu');
+    var icon = this.querySelector('.material-symbols-outlined');
+    menu.classList.toggle('hidden');
+    icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+  });
+
+  // Tab logic
+  var currentSize = '84';
+  var currentUnit = '84A';
+
+  function showUnit(unitId) {
+    document.querySelectorAll('.unit-panel').forEach(function(p) { p.classList.remove('active'); });
+    var panel = document.getElementById('unit-' + unitId);
+    if (panel) panel.classList.add('active');
+    currentUnit = unitId;
+  }
+
+  function showSize(size) {
+    currentSize = size;
+    // Update size tab styles
+    document.querySelectorAll('.tab-size-btn').forEach(function(b) {
+      b.classList.remove('active');
+      b.classList.add('text-primary');
+    });
+    document.querySelectorAll('.tab-size-btn').forEach(function(b) {
+      if (b.dataset.size === size) { b.classList.add('active'); b.classList.remove('text-primary'); }
+    });
+    // Show correct subtab group
+    document.querySelectorAll('.subtab-group').forEach(function(g) { g.style.display = 'none'; });
+    var subGroup = document.getElementById('subtabs-' + size);
+    if (subGroup) subGroup.style.display = 'grid';
+    // Activate first type button, show first unit
+    var firstTypeBtn = subGroup ? subGroup.querySelector('.tab-type-btn') : null;
+    if (firstTypeBtn) {
+      subGroup.querySelectorAll('.tab-type-btn').forEach(function(b) {
+        b.classList.remove('active'); b.classList.add('text-on-surface-variant');
+      });
+      firstTypeBtn.classList.add('active'); firstTypeBtn.classList.remove('text-on-surface-variant');
+      showUnit(firstTypeBtn.dataset.unit);
+    }
+  }
+
+  // Size button clicks
+  document.querySelectorAll('.tab-size-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() { showSize(this.dataset.size); });
+  });
+
+  // Type button clicks
+  document.querySelectorAll('.tab-type-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var parentGroup = this.closest('.subtab-group');
+      parentGroup.querySelectorAll('.tab-type-btn').forEach(function(b) {
+        b.classList.remove('active'); b.classList.add('text-on-surface-variant');
+      });
+      this.classList.add('active'); this.classList.remove('text-on-surface-variant');
+      showUnit(this.dataset.unit);
+    });
+  });
+</script>
 </body>
 </html>
