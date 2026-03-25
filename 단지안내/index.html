@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>단지안내 | 자라섬 수자인 리버페스타</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#001736","on-primary":"#ffffff","primary-container":"#002b5b","on-primary-container":"#7594ca","secondary":"#515f74","surface":"#f8f9fa","surface-container-low":"#f3f4f5","surface-container":"#edeeef","surface-container-high":"#e7e8e9","surface-container-highest":"#e1e3e4","surface-container-lowest":"#ffffff","on-surface":"#191c1d","on-surface-variant":"#43474f","outline":"#747780","outline-variant":"#c4c6d0","primary-fixed":"#d6e3ff","on-primary-fixed":"#001b3d"},fontFamily:{"headline":["Pretendard Variable","Pretendard","-apple-system","sans-serif"],"body":["Pretendard Variable","Pretendard","-apple-system","sans-serif"],"label":["Pretendard Variable","Pretendard","-apple-system","sans-serif"]},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},fontSize:{"xs":["0.8125rem",{lineHeight:"1.6"}],"sm":["0.9375rem",{lineHeight:"1.75"}],"base":["1.0625rem",{lineHeight:"1.8"}],"lg":["1.1875rem",{lineHeight:"1.75"}],"xl":["1.375rem",{lineHeight:"1.65"}],"2xl":["1.625rem",{lineHeight:"1.4"}],"3xl":["2rem",{lineHeight:"1.25"}],"4xl":["2.5rem",{lineHeight:"1.15"}],"5xl":["3.25rem",{lineHeight:"1.05"}],"6xl":["4rem",{lineHeight:"1.0"}],"7xl":["5rem",{lineHeight:"0.95"}],"8xl":["6.5rem",{lineHeight:"0.92"}],"9xl":["8rem",{lineHeight:"0.9"}]}}}}
+</script>
+<style>
+  *{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;}
+  .material-symbols-outlined{font-family:"Material Symbols Outlined"!important;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}
+  .mega-menu-content{display:none;}.group:hover .mega-menu-content{display:block;}
+  html{scroll-behavior:smooth;}
+  @keyframes ping-slow{0%{box-shadow:0 0 0 0 rgba(0,23,54,0.35);}70%{box-shadow:0 0 0 14px rgba(0,23,54,0);}100%{box-shadow:0 0 0 0 rgba(0,23,54,0);}}.ping-slow{animation:ping-slow 2.4s ease-out infinite;}
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl transition-all duration-300 border-b border-outline-variant/10">
+  <div class="flex justify-between items-center px-5 sm:px-8 py-4 md:py-5 max-w-[1920px] mx-auto">
+    <a href="../" class="flex flex-col leading-none">
+      <span class="text-xl md:text-2xl font-black tracking-tighter text-primary font-headline">자라섬 수자인</span>
+      <span class="text-[10px] md:text-xs font-bold tracking-wider text-outline uppercase mt-0.5">RIVER FESTA</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-10 xl:gap-12">
+      <a href="../사업안내/" class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">사업안내</a>
+      <div class="group relative py-2">
+        <button class="font-headline font-bold tracking-tight uppercase text-sm text-primary border-b-2 border-primary pb-1">단지안내</button>
+        <div class="mega-menu-content absolute top-full left-0 w-52 bg-white shadow-2xl p-5 rounded-xl border border-outline-variant/10">
+          <ul class="space-y-3">
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#premium">단지특화</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#community">커뮤니티</a></li>
+            <li><a class="block text-sm font-medium text-on-surface-variant hover:text-primary py-1" href="#aircare">에어케어</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="../세대안내/" class="font-headline font-bold tracking-tight uppercase text-sm text-slate-500 hover:text-primary transition-colors">세대안내</a>
+    </div>
+    <div class="flex items-center gap-3 md:gap-5">
+      <div class="hidden md:flex flex-col items-end leading-tight">
+        <span class="text-xs text-outline tracking-wider">분양 상담</span>
+        <a href="tel:15511554" class="text-lg md:text-xl font-black tracking-tight text-primary hover:text-primary-container transition-colors font-headline">1551-1554</a>
+      </div>
+      <a href="../세대안내/#contact" class="bg-primary text-on-primary px-4 md:px-6 py-2.5 rounded-xl font-headline font-bold text-sm tracking-wider hover:bg-primary-container transition-all">상담신청</a>
+      <button class="text-primary lg:hidden p-1"><span class="material-symbols-outlined text-2xl">menu</span></button>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-[72px] md:pt-[84px] pb-20 md:pb-24">
+
+  <!-- PAGE HEADER -->
+  <header class="px-5 sm:px-8 max-w-[1920px] mx-auto pt-10 md:pt-16 mb-12 md:mb-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8">
+      <div class="max-w-4xl">
+        <span class="text-primary font-headline font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 md:mb-4 block">Jara Island Sujain River Festa</span>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight md:tracking-tighter text-primary leading-tight md:leading-[0.95] lg:leading-[0.9] mb-5 md:mb-8">단지안내</h1>
+        <p class="text-on-surface-variant font-body text-base md:text-lg lg:text-xl leading-[1.8] max-w-xl">PREMIUM 6의 특화 설계부터 트렌디한 커뮤니티, SIX ZONES 에어케어까지 자라섬 수자인 리버페스타의 모든 단지 특화 사항을 소개합니다.</p>
+      </div>
+      <div class="hidden lg:block text-right shrink-0">
+        <p class="text-outline font-label text-sm uppercase tracking-[0.2em] mb-2">Concept</p>
+        <p class="text-primary font-headline font-bold text-2xl">THE MASTERPIECE OF LIFE</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: PREMIUM 6 BENTO -->
+  <section id="premium" class="mb-20 md:mb-32">
+    <div class="px-5 sm:px-8 max-w-[1920px] mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-6 md:gap-8">
+        <div>
+          <span class="block font-label text-xs sm:text-sm uppercase tracking-widest text-outline mb-3">THE MASTERPIECE OF LIFE</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-black text-primary tracking-tight md:tracking-tighter uppercase">PREMIUM 6</h2>
+        </div>
+        <p class="text-on-surface-variant text-base md:text-lg max-w-sm leading-[1.8]">자라섬 수자인 리버페스타가 선사하는 여섯 가지 삶의 프리미엄</p>
+      </div>
+
+      <!-- Bento Grid: stacked on mobile, grid on desktop -->
+      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-4 md:gap-6 lg:gap-8">
+        <!-- Big: View -->
+        <div class="lg:col-span-8 relative group overflow-hidden bg-primary min-h-[280px] sm:min-h-[380px] lg:min-h-0 lg:h-[560px]">
+          <img class="w-full h-full object-cover opacity-65 group-hover:scale-105 transition-transform duration-700 absolute inset-0"
+            src="../images/card_1.jpg" alt="북한강 영구 조망"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/20 to-transparent"></div>
+          <div class="absolute bottom-8 left-6 right-6 sm:bottom-12 sm:left-12 sm:right-12 text-white">
+            <span class="inline-block text-xs font-bold tracking-widest uppercase bg-white/20 backdrop-blur-sm px-3 py-1 mb-4">PREMIUM 01</span>
+            <h4 class="font-headline font-extrabold text-2xl sm:text-3xl md:text-4xl mb-3 leading-tight">전세대 북한강<br/>자라섬 영구 조망</h4>
+            <p class="text-sm sm:text-base md:text-lg max-w-md opacity-80 leading-[1.75]">어떤 건물도 가리지 못하는 영구 조망. 7M 와이드 거실에서 파노라마 강변 뷰를 갤러리처럼 감상하세요.</p>
+          </div>
+        </div>
+        <!-- Right two: side by side on mobile, stacked on lg -->
+        <div class="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-4 md:gap-6 lg:gap-8 lg:h-[560px]">
+          <div class="bg-surface-container-low p-6 md:p-10 flex flex-col justify-end">
+            <span class="material-symbols-outlined text-primary text-4xl md:text-5xl mb-4">directions_railway</span>
+            <span class="text-xs font-bold tracking-widest uppercase text-outline mb-2">PREMIUM 02</span>
+            <h4 class="font-headline font-extrabold text-lg md:text-2xl mb-2">GTX-B 서울 35분</h4>
+            <p class="text-xs md:text-sm text-on-surface-variant leading-[1.75]">GTX-B 연장 추진으로 서울역 약 35분. 현재도 ITX로 청량리 40분 생활권.</p>
+          </div>
+          <div class="bg-primary-container p-6 md:p-10 flex flex-col justify-end">
+            <span class="material-symbols-outlined text-white text-4xl md:text-5xl mb-4">weekend</span>
+            <span class="text-xs font-bold tracking-widest uppercase text-on-primary-container mb-2">PREMIUM 03</span>
+            <h4 class="font-headline font-extrabold text-lg md:text-2xl text-white mb-2">7M 와이드 거실</h4>
+            <p class="text-xs md:text-sm text-on-primary-container opacity-80 leading-[1.75]">84A 타입 가변벽 제거 시 거실 폭 약 7M. 일반 84㎡ 대비 압도적 개방감.</p>
+          </div>
+        </div>
+
+        <!-- Bottom row: 3 cards -->
+        <div class="lg:col-span-4 relative group overflow-hidden bg-primary min-h-[220px]">
+          <img class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700 absolute inset-0"
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80&auto=format&fit=crop" alt="커뮤니티"/>
+          <div class="absolute inset-0 bg-primary/60"></div>
+          <div class="absolute bottom-7 left-7 right-7 text-white z-10">
+            <span class="text-xs font-bold tracking-widest uppercase text-on-primary-container block mb-2">PREMIUM 04</span>
+            <h4 class="font-headline font-extrabold text-xl md:text-2xl mb-2">트렌디한 커뮤니티</h4>
+            <p class="text-sm text-on-primary-container opacity-80 leading-[1.7]">피트니스·도서관·어린이집 등 호텔급 커뮤니티 완비</p>
+          </div>
+        </div>
+        <div class="lg:col-span-4 bg-surface-container-low p-7 md:p-10 flex flex-col justify-end min-h-[220px]">
+          <span class="material-symbols-outlined text-primary text-4xl md:text-5xl mb-4">air</span>
+          <span class="text-xs font-bold tracking-widest uppercase text-outline mb-2">PREMIUM 05</span>
+          <h4 class="font-headline font-extrabold text-xl md:text-2xl mb-2">SIX ZONES 에어케어</h4>
+          <p class="text-sm md:text-base text-on-surface-variant leading-[1.75]">단지 출입구부터 세대 내부까지 6단계 공기질 관리 시스템.</p>
+        </div>
+        <div class="lg:col-span-4 bg-primary p-7 md:p-10 flex flex-col justify-end min-h-[220px]">
+          <span class="material-symbols-outlined text-white text-4xl md:text-5xl mb-4">savings</span>
+          <span class="text-xs font-bold tracking-widest uppercase text-on-primary-container mb-2">PREMIUM 06</span>
+          <h4 class="font-headline font-extrabold text-xl md:text-2xl text-white mb-2">파격적인 계약조건</h4>
+          <p class="text-sm md:text-base text-on-primary-container opacity-80 leading-[1.75]">계약금 500만원 · 중도금 무이자 · 전매 무제한 · 주택 수 미포함</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: COMMUNITY -->
+  <section id="community" class="bg-primary py-16 md:py-24 lg:py-32 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row justify-between items-end mb-12 md:mb-20 gap-6 md:gap-8">
+        <div class="text-white max-w-2xl">
+          <span class="font-label text-xs sm:text-sm uppercase tracking-widest mb-4 block text-on-primary-container">TRENDY COMMUNITY</span>
+          <h2 class="font-headline font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight md:tracking-tighter uppercase leading-tight md:leading-none">트렌디한<br/>커뮤니티에<br/>여유를 만끽하다</h2>
+        </div>
+        <div class="text-on-primary-container font-headline font-bold text-sm sm:text-base tracking-widest border-b border-on-primary-container pb-2 hover:text-white transition-colors cursor-pointer">전체 시설 보기</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        <div class="space-y-6 md:space-y-8 group">
+          <div class="aspect-[4/3] md:aspect-[4/5] overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=80&auto=format&fit=crop" alt="피트니스룸"/>
+          </div>
+          <div class="text-white">
+            <h5 class="font-headline font-bold text-xl md:text-2xl mb-3 tracking-tight">피트니스룸</h5>
+            <p class="text-sm md:text-base lg:text-lg text-on-primary-container leading-[1.8] opacity-80">프리미엄 운동 기구와 최적의 환경으로 구성된 전문 피트니스 센터. 북한강 뷰를 즐기며 운동하세요.</p>
+          </div>
+        </div>
+        <div class="space-y-6 md:space-y-8 group lg:mt-24">
+          <div class="aspect-[4/3] md:aspect-[4/5] overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+              src="../images/library.jpg" alt="작은 도서관"/>
+          </div>
+          <div class="text-white">
+            <h5 class="font-headline font-bold text-xl md:text-2xl mb-3 tracking-tight">작은 도서관</h5>
+            <p class="text-sm md:text-base lg:text-lg text-on-primary-container leading-[1.8] opacity-80">북한강 조망과 함께하는 입주민 전용 도서관. 고요한 독서 공간에서 일상의 여유를 누리세요.</p>
+          </div>
+        </div>
+        <div class="space-y-6 md:space-y-8 group">
+          <div class="aspect-[4/3] md:aspect-[4/5] overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+              src="../images/childcare.jpg" alt="어린이집"/>
+          </div>
+          <div class="text-white">
+            <h5 class="font-headline font-bold text-xl md:text-2xl mb-3 tracking-tight">어린이집</h5>
+            <p class="text-sm md:text-base lg:text-lg text-on-primary-container leading-[1.8] opacity-80">단지 내 전문 보육 공간. 안심하고 맡길 수 있는 입주민 전용 국공립 수준의 어린이집.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-14 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-12 md:pt-16">
+        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary-container text-2xl md:text-3xl">spa</span><span class="text-white font-headline font-bold text-sm md:text-base">명상실</span></div>
+        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary-container text-2xl md:text-3xl">computer</span><span class="text-white font-headline font-bold text-sm md:text-base">비즈니스센터</span></div>
+        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary-container text-2xl md:text-3xl">restaurant</span><span class="text-white font-headline font-bold text-sm md:text-base">레스토랑</span></div>
+        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-on-primary-container text-2xl md:text-3xl">child_care</span><span class="text-white font-headline font-bold text-sm md:text-base">키즈 라운지</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SIX ZONES -->
+  <section id="aircare" class="py-16 md:py-24 lg:py-32 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-6 mb-10 md:mb-20">
+        <div>
+          <span class="block text-primary font-headline font-bold text-xs sm:text-sm tracking-widest uppercase mb-4">AIR QUALITY SYSTEM</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-black text-primary mb-4 md:mb-6 tracking-tight md:tracking-tighter">SIX ZONES<br/>수자인 클린에어</h2>
+          <p class="text-on-surface-variant leading-[1.8] text-base md:text-lg lg:text-xl max-w-lg">단지 출입구부터 세대 내부까지, 6단계에 걸친 촘촘한 공기질 관리 시스템.</p>
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-12 gap-6 md:gap-8">
+        <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
+          <div class="p-5 md:p-8 bg-white shadow-[0_8px_32px_rgba(0,27,61,0.06)] flex items-start gap-3 md:gap-5 border-l-4 border-primary">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl shrink-0">sensor_door</span>
+            <div><p class="font-headline font-extrabold text-primary text-xl md:text-2xl mb-1">01</p><p class="text-xs md:text-sm text-on-surface-variant leading-[1.7]">단지 출입구</p></div>
+          </div>
+          <div class="p-5 md:p-8 bg-white shadow-[0_8px_32px_rgba(0,27,61,0.06)] flex items-start gap-3 md:gap-5 border-l-4 border-primary">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl shrink-0">park</span>
+            <div><p class="font-headline font-extrabold text-primary text-xl md:text-2xl mb-1">02</p><p class="text-xs md:text-sm text-on-surface-variant leading-[1.7]">단지 외부</p></div>
+          </div>
+          <div class="p-5 md:p-8 bg-white shadow-[0_8px_32px_rgba(0,27,61,0.06)] flex items-start gap-3 md:gap-5 border-l-4 border-primary">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl shrink-0">local_parking</span>
+            <div><p class="font-headline font-extrabold text-primary text-xl md:text-2xl mb-1">03</p><p class="text-xs md:text-sm text-on-surface-variant leading-[1.7]">자동주차장</p></div>
+          </div>
+          <div class="p-5 md:p-8 bg-white shadow-[0_8px_32px_rgba(0,27,61,0.06)] flex items-start gap-3 md:gap-5 border-l-4 border-primary">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl shrink-0">apartment</span>
+            <div><p class="font-headline font-extrabold text-primary text-xl md:text-2xl mb-1">04</p><p class="text-xs md:text-sm text-on-surface-variant leading-[1.7]">공용부</p></div>
+          </div>
+          <div class="p-5 md:p-8 bg-white shadow-[0_8px_32px_rgba(0,27,61,0.06)] flex items-start gap-3 md:gap-5 border-l-4 border-primary">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl shrink-0">elevator</span>
+            <div><p class="font-headline font-extrabold text-primary text-xl md:text-2xl mb-1">05</p><p class="text-xs md:text-sm text-on-surface-variant leading-[1.7]">엘리베이터</p></div>
+          </div>
+          <div class="p-5 md:p-8 bg-primary flex items-start gap-3 md:gap-5 border-l-4 border-on-primary-container">
+            <span class="material-symbols-outlined text-white text-2xl md:text-3xl shrink-0">home</span>
+            <div><p class="font-headline font-extrabold text-white text-xl md:text-2xl mb-1">06</p><p class="text-xs md:text-sm text-on-primary-container leading-[1.7]">세대 내부</p></div>
+          </div>
+        </div>
+        <div class="lg:col-span-4 bg-white p-8 md:p-10 shadow-[0_8px_32px_rgba(0,27,61,0.06)] flex flex-col justify-center gap-6 md:gap-8">
+          <div class="h-1 w-16 bg-primary"></div>
+          <p class="text-on-surface-variant leading-[1.85] text-base md:text-lg">수자인 클린에어 시스템은 단순 공기청정을 넘어 단지 전체를 하나의 청정 환경으로 만드는 통합 솔루션입니다.</p>
+          <p class="text-on-surface-variant leading-[1.85] text-base md:text-lg">자라섬의 맑은 공기와 함께, 세대 문을 열었을 때 느끼는 쾌적함이 다릅니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="w-full border-t border-slate-200 bg-[#f3f4f5] text-primary">
+  <div class="w-full px-5 sm:px-8 py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 max-w-[1920px] mx-auto">
+    <div class="space-y-5 sm:col-span-2">
+      <div><div class="font-headline font-black text-lg md:text-xl uppercase tracking-tighter">자라섬 수자인 리버페스타</div><div class="text-xs text-outline uppercase tracking-widest mt-1">JARA ISLAND SUJAIN RIVER FESTA</div></div>
+      <p class="text-sm leading-[1.8] opacity-70 max-w-sm">경기도 가평군 가평읍 달전리 284-7번지<br/>지하 2층 ~ 지상 최고 29층 / 2개동 / 총 381세대</p>
+      <div><p class="text-xs font-bold uppercase tracking-widest text-outline mb-2">분양 상담 대표번호</p><a href="tel:15511554" class="flex items-center gap-3 font-headline font-black text-2xl md:text-3xl text-primary hover:text-primary-container transition-colors"><span class="material-symbols-outlined text-xl md:text-2xl">call</span>1551-1554</a></div>
+    </div>
+    <div class="space-y-5">
+      <h6 class="font-headline font-bold text-sm tracking-widest uppercase">바로가기</h6>
+      <ul class="space-y-3 text-sm opacity-70">
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../사업안내/">사업안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../단지안내/">단지안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../세대안내/">세대안내</a></li>
+        <li><a class="hover:opacity-100 hover:text-primary-container transition-opacity py-0.5 block" href="../세대안내/#contact">상담신청</a></li>
+      </ul>
+    </div>
+    <div class="space-y-5">
+      <h6 class="font-headline font-bold text-sm tracking-widest uppercase">입주 일정</h6>
+      <ul class="space-y-4 text-sm">
+        <li class="border-l-2 border-primary pl-4 py-1"><span class="block text-outline text-xs uppercase tracking-wider mb-1">입주 예정</span><span class="font-headline font-bold text-lg">2027년 9월</span></li>
+        <li class="border-l-2 border-primary pl-4 py-1"><span class="block text-outline text-xs uppercase tracking-wider mb-1">시공사</span><span class="font-headline font-bold text-lg">BS한양건설</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="px-5 sm:px-8 py-6 border-t border-slate-200"><div class="max-w-[1920px] mx-auto"><span class="text-xs tracking-widest opacity-50 uppercase">© 2027 자라섬 수자인 리버페스타. All Rights Reserved.</span></div></div>
+</footer>
+
+<div style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:99;">
+  <a href="tel:15511554" class="ping-slow flex items-center gap-3 bg-primary text-white px-5 py-3 md:px-7 md:py-4 shadow-2xl hover:bg-primary-container transition-all">
+    <span class="material-symbols-outlined text-2xl md:text-3xl">phone_in_talk</span>
+    <div><div class="text-[10px] tracking-widest uppercase opacity-70">상담 전화</div><div class="font-headline font-black text-xl md:text-2xl leading-tight">1551-1554</div></div>
+  </a>
+</div>
+</body>
+</html>
